@@ -1,9 +1,11 @@
 # -*- encoding: utf-8 -*-
 $:.push File.expand_path("../lib", __FILE__)
 
+require "changepoints/version"
+
 Gem::Specification.new do |s|
   s.name        = "changepoints"
-  s.version     = 0.2
+  s.version     = Changepoints::VERSION
   s.authors     = ["Shelley Fisher"]
   s.email       = ["michelle.j.fisher@gmail.com"]
   s.homepage    = ""
@@ -14,4 +16,8 @@ Gem::Specification.new do |s|
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
+
+  s.add_runtime_dependency 'narray', '~> 0'
+  s.add_runtime_dependency 'rb-gsl', '~> 1'
+  s.add_runtime_dependency 'gnuplot', '~> 2'
 end

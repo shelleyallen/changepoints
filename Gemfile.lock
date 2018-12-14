@@ -1,14 +1,28 @@
 PATH
   remote: .
   specs:
-    changepoints (0.2)
+    changepoints (0.3.0)
+      gnuplot (~> 2)
+      narray (~> 0)
+      rb-gsl (~> 1)
 
 GEM
   remote: http://rubygems.org/
   specs:
+    gnuplot (2.6.2)
+    gsl (2.1.0.3)
+    narray (0.6.1.2)
+    rb-gsl (1.16.0.6)
+      gsl
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   changepoints!
+  gnuplot
+  narray
+  rb-gsl
+
+BUNDLED WITH
+   1.16.4
